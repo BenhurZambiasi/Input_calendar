@@ -1,46 +1,3 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-button {
-  font-size: calc(10px + 2vmin);
-}
-
 .container-calendar {
   display: flex;
   margin-left: 10px;
@@ -110,9 +67,8 @@ button {
 }
 
 .body_calendar {
-  margin-left: 160px;
   width: 100%;
-  max-width: 366px;
+  max-width: 266px;
   height: 337px;
   box-shadow: 0px 3px 6px #0000006b;
   border-radius: 5px;
@@ -122,8 +78,9 @@ button {
   opacity: 0;
   animation: animaCalendario 0.5s forwards !important;
   position: absolute;
-  margin-top: 20px;
   z-index: 10;
+  margin-top: 18px;
+  margin-left: 150px;
 }
 
 @keyframes animaCalendario {
@@ -226,6 +183,7 @@ button {
   border-radius: 50%;
   color: #7c7c83;
 }
+
 .body_calendar_content_day_per div:hover {
   background-color: #00995d;
   color: #fff;
@@ -244,4 +202,11 @@ button {
 .body_calendar_content_day_per .activeDay {
   background-color: #00995d;
   color: #fff;
+}
+
+@media (max-width: 768px) {
+  .body_calendar {
+    margin-top: 68px;
+    margin-left: 0px;
+  }
 }
